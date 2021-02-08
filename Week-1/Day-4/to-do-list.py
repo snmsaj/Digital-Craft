@@ -9,9 +9,9 @@ def view_tasks():
 
 
 task_list = []
-display_menu()
 
 while True:
+    display_menu()
     choice = input("Type in the option: ")
 
     if choice == "1":
