@@ -1,3 +1,5 @@
+store_list = []
+
 class Store:
     def __init__(self, name, address):
         self.name = name
@@ -17,7 +19,6 @@ def display_menu():
     print("\nPress 1 to add a store.\nPress 2 to add an item to a store.\nPress 3 to view list.\nPress q to quit.\n")
         
 
-store_list = []
 choice = ""
 
 while choice != "q":
@@ -43,8 +44,8 @@ while choice != "q":
 
     elif choice == "3":
         for i in range(0, len(store_list)):
+            print(f"{i + 1}. {store_list[i].name} ({store_list[i].address}):")
             for item in store_list[i].item:
-                print(f"{i + 1}. {store_list[i].name} ({store_list[i].address}):")
                 print(f"\t{item.amount} of {item.item}. It costs ${item.price}")
         
     else:
