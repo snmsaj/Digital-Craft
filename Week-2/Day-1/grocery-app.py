@@ -52,8 +52,15 @@ while choice != "q":
     elif choice == "2":
         for i in range(0, len(store_list)):
             print(f"{i + 1}. {store_list[i].name}")
+        
+        while True:
+            try:
+                choose_store = int(input("Enter number for store you want to add item for: ")) - 1
+            except ValueError:
+                print("Error! Please enter a whole number.")
+            else:
+                break
 
-        choose_store = int(input("Enter number for store you want to add item for: ")) - 1
         item_name = input("Name your item: ")
         item_price = float(input("How much does it cost: "))
         item_amount = int(input('How may will you buy: '))
