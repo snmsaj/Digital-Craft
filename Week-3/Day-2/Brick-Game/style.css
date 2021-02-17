@@ -1,0 +1,70 @@
+body{
+    
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(147, 238, 147);
+}
+
+
+.row{
+    display: flex;
+}
+
+.block{
+    height: 30px;
+    width: 90px;
+    background-color: black;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.block.redblock{
+    background-color: red;
+}
+
+
+.block.yellowblock{
+    background-color: yellow;
+}
+
+.block.greenblock{
+    background-color: green;
+}
+
+.block.blueblock{
+    background-color: blue;
+}
+
+.block.seagreenblock{
+    background-color: rgb(147, 238, 147);
+    border: solid 1px rgb(147, 238, 147);
+}
+
+.bigblock{
+    height: 400px;
+    width: 1102px;
+    background-color: black;
+    border: solid 1px black;
+    margin: 0;
+}
+
+.block.bigblock{
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.fontcolor{
+    color: rgb(147, 238, 147);
+}
+
+.platform{
+    height: 10px;
+    width: 100px;
+    background-color: rgb(147, 238, 147);
+    border: solid 1px rgb(147, 238, 147);
+    margin: 0;
+}

@@ -1,0 +1,11 @@
+p {
+    color:red;
+}
+
+.pclass {
+    color: blue;
+}
+
+#superSpecific {
+    color: blueviolet;
+}
