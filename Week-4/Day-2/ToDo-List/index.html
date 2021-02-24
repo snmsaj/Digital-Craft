@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="add-task">
+        <div class="container">
+            <label for="add-task" class="enter-task">Enter Task</label>
+            <input type="text" id="taskText" name="add-task" placeholder="Complete this assignment">
+            <button id="addBtn" class="add-btn">Add</button>
+        </div>
+    </section>
+
+    <section class="pending-tasks">
+        <div class="container">
+            <h3>Pending Tasks</h3>
+
+            <ul class="pending-tasks" id="pendingTasks">
+                <!-- Pending Tasks go here -->
+            </ul>
+        </div>
+    </section>
+
+    <section class="completed-tasks">
+        <div class="container">
+            <h3>Completed Tasks</h3>
+
+            <ul class="completed-tasks" id="completedTasks">
+                <!-- Completed Tasks go here -->
+            </ul>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
