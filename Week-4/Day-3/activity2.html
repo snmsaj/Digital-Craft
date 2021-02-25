@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="speakersUL">
+
+    </ul>
+
+    <script>
+
+        const speakersUL = document.getElementById("speakersUL")
+
+        const speakers = [
+            { name: 'John Doe', category: 'JavaScript' },
+            { name: 'Mary Doe', category: 'Python' },
+            { name: 'Alex Doe', category: 'iOS' },
+            { name: 'Steve Doe', category: 'Kotlin' },
+            { name: 'Jerry Doe', category: 'Java' }
+        ]
+
+        for (let index = 0; index < speakers.length; index++) {
+
+            let speaker = speakers[index]
+
+            let speakerItem = `
+                            <li>
+                                <div>${speaker.name}, ${speaker.category}</div>
+                            </li>
+            `
+
+            speakersUL.insertAdjacentHTML('beforeend', speakerItem)
+        }
+
+    </script>
+</body>
+
+</html>

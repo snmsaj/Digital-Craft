@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="firstName">
+    <input type="text" id="lastName">
+    <button id="submitBtn">Submit</button>
+    <h1 id="showFullName"></h1>
+
+
+
+    <script>
+        const firstName = document.getElementById("firstName")
+        const lastName = document.getElementById("lastName")
+        const submitBtn = document.getElementById("submitBtn")
+        const showFullName = document.getElementById("showFullName")
+
+        submitBtn.addEventListener("click", function() {
+            showFullName.innerHTML = `${firstName.value}, ${lastName.value}`
+        })
+
+
+    </script>
+</body>
+</html>

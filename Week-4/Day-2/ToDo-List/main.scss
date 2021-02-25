@@ -10,13 +10,14 @@ body {
 
 section.add-task {
     padding: 2em;
+}
 
-    .container {
-        display: flex;
-        place-content: space-between;
-    }
+.container {
+    display: flex;
+    place-content: space-between;
+}
 
-    .enter-task {
-        
-    }
+label.enter-task {
+    font-weight: bold;
+    color: gray;
 }
