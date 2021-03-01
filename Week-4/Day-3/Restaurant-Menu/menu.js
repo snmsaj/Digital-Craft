@@ -3,6 +3,19 @@ const starterBtn = document.getElementById("startersBtn")
 const entreesBtn = document.getElementById("entreesBtn")
 const dessertsBtn = document.getElementById("dessertsBtn")
 
+function displayDishes(dishesToDisplay) {
+    dishItems = dishesToDisplay.map(function(dish) {
+        return `
+                <li>
+                    <h3>${dish.title}</h3>
+                    <p>${dish.description}</p>
+                    <p>$${dish.price}</p>
+                    <img src="${dish.imageURL}">
+                </li>
+        `
+    })
+}
+
 const starterList = dishes.filter(function(dish){
     return dish.course == "Starters"
 })
@@ -37,8 +50,7 @@ starterBtn.addEventListener("click", function() {
         `
     })
 
-    // if (dishUL.hasChildNodes())
-    // dishUL.removeChild()
+    dishUL.innerHTML = ""
     dishUL.insertAdjacentHTML("beforeend" , dishItems.join(""))
 })
 

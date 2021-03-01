@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="timerInput">
+    <button id="startTimerBtn">Start Timer</button>
+    <h1 id="displayTimer"></h1>
+
+    <script>
+        const timerInput = document.getElementById("timerInput")
+        const startTimerBtn = document.getElementById("startTimerBtn")
+        const displayTimer = document.getElementById("displayTimer")
+
+        
+
+        startTimerBtn.addEventListener("click", function () {
+            let counter = timerInput.value
+
+            const intervalId = window.setInterval(function () {
+                
+                displayTimer.innerHTML = `${counter}`
+                counter--
+
+                if (counter < 0) {
+                    window.clearInterval(intervalId)
+                }
+
+            }, 1000)
+        })
+
+    </script>
+</body>
+
+</html>
