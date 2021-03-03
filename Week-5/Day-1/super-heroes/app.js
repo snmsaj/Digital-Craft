@@ -3,11 +3,6 @@ const movieDetailsDIV = document.getElementById("movieDetailsDIV")
 const moviesURL = "http://www.omdbapi.com/?s=batman&apikey=21ead322"
 
 
-function getMovieDetailsURL(movieID) {
-    return `http://www.omdbapi.com/?i=${movieID}&apikey=21ead322`
-}
-
-
 let request = new XMLHttpRequest()
 
 request.addEventListener("load", function() {
