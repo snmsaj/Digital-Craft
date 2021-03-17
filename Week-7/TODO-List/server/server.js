@@ -1,21 +1,27 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const server = express();
 
-app.use(cors());
-app.use(express.json());
+server.use(cors());
+server.use(express.json());
 
 
+let todoList = [{"title": "Cook Food", "priority": "High", "date":"2021-03-15"}]
 
-let toDoList = [{title: "Cook Food", priority: "High", date:"03/15/2021"}]
-
-app.get("/todos", (req, res) => {
-    toDoListTasks = toDoList.map((task) => {
-        return task
-    })
-    res.json(toDoListTasks);
+server.get("/todos", (req, res) => {
+    res.json(todoList);
 })
 
-app.listen(3001, () => {
+server.post("/todos", (req, res) => {
+    const title = req.body.title;
+    const priority = req.body.priority;
+    const date = req.body.date;
+    const task = {"title":title, "priority":priority, "date":date}
+
+    todoList.push(task);
+    res.json({message:"Task has been added"})
+})
+
+server.listen(3000, () => {
     console.log("Server is running...")
 })
