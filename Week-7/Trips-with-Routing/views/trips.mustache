@@ -15,22 +15,25 @@
     <div>
         {{#trips}}
 
-            <h3>Trip: {{title}}</h3>
-            <p>Depart: {{departTrip}}</p>
-            <p>Return: {{returnTrip}}</p>
-            <img src="{{image}}" style="width: 300px;">
-            
+        <h3>{{title}}</h3>
+        <p>Depart: {{departTrip}}</p>
+        <p>Return: {{returnTrip}}</p>
+        <img src="{{image}}" style="width: 20em;">
+
+        <div>
             <form method="POST" action="/trips">
                 <input type="hidden" value="{{id}}" name="id">
                 <button>Delete</button>
             </form>
 
+            <a href="/trips/{{id}}"><button>Update</button></a>
+        </div>
 
         {{/trips}}
     </div>
 
     {{^trips}}
-    <h2>There are no trips planned. Click "Add Trip" to start your journey.</h2>
+    <h3>There are no trips planned. Click "Add Trip" to start your journey.</h3>
     {{/trips}}
 
 </body>

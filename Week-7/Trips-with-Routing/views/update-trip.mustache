@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Trip</title>
+</head>
+
+<body>
+    <h2>Update Trip</h2>
+
+    <div>
+        {{#trip}}
+
+        <form method="POST" action="/trips/{{id}}">
+            <label>
+                City
+                <input type="text" placeholder="City Name" value="{{title}}" name="title">
+            </label>
+
+            <label>
+                Depart
+                <input type="date" value="{{departTrip}}" name="departTrip">
+            </label>
+
+            <label>
+                Return
+                <input type="date" value="{{returnTrip}}" name="returnTrip">
+            </label>
+
+            <label>
+                Image url
+                <input type="text" placeholder="IMG url" value="{{image}}" name="image">
+            </label>
+
+            <input type="hidden" value="{{id}}" name="id">
+
+            <button>Update</button>
+        </form>
+        
+        {{/trip}}
+    </div>
+</body>
+
+</html>
