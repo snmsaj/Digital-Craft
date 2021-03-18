@@ -10,20 +10,24 @@
 
 <body>
     <h1>Trips</h1>
-    <a href="/add-trip"><button>Add Trip</button></a>
+    <a href="/trips/add-trip"><button>Add Trip</button></a>
 
-    <ul>
+    <div>
         {{#trips}}
 
-        <li>
-            <p>Trip: {{title}}</p>
+            <h3>Trip: {{title}}</h3>
             <p>Depart: {{departTrip}}</p>
             <p>Return: {{returnTrip}}</p>
             <img src="{{image}}" style="width: 300px;">
-        </li>
+            
+            <form method="POST" action="/trips">
+                <input type="hidden" value="{{id}}" name="id">
+                <button>Delete</button>
+            </form>
+
 
         {{/trips}}
-    </ul>
+    </div>
 
     {{^trips}}
     <h2>There are no trips planned. Click "Add Trip" to start your journey.</h2>

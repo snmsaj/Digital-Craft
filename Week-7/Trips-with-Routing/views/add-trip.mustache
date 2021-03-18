@@ -11,7 +11,7 @@
 <body>
     <h1>Add Trip</h1>
 
-    <form method="POST" action="/add-trip">
+    <form method="POST" action="/trips/add-trip">
         <label>
             City
             <input type="text" placeholder="City Name" name="title">
@@ -31,6 +31,8 @@
             Image url
             <input type="text" placeholder="IMG url" name="image">
         </label>
+
+        <input type="hidden" value="{{id}}" name="id">
 
         <button>Add</button>
     </form>

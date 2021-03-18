@@ -18,7 +18,11 @@ global.tripList = [
 }
 ]
 
-const tripsController = require('./routes/trips')
+// server.get('/login', (req, res) => {
+//     res.
+// })
+
+
 
 server.listen(3000, () => {
     console.log('Server is running...');
