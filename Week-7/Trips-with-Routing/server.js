@@ -18,7 +18,24 @@ global.tripList = [
 }
 ]
 
-const tripsController = require('./routes/trips')
+server.get('/', (req, res) => {
+    res.render("index",{trips:tripList});
+})
+
+server.get('/add-trip', (req, res) => {
+    res.render('add-trip');
+})
+
+server.post('/add-trip', (req, res) => {
+    const title = req.body.title
+    const departTrip = req.body.departTrip
+    const returnTrip = req.body.returnTrip
+    const image = req.body.image
+    let trip = {title: title, departTrip: departTrip, returnTrip: returnTrip, image: image}
+    
+    tripList.push(trip)
+    res.redirect('/')
+})
 
 server.listen(3000, () => {
     console.log('Server is running...');

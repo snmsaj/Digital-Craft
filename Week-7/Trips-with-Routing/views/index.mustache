@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips</title>
+</head>
+
+<body>
+    <h1>Trips</h1>
+    <a href="/add-trip"><button>Add Trip</button></a>
+
+    <ul>
+        {{#trips}}
+
+        <li>
+            <p>Trip: {{title}}</p>
+            <p>Depart: {{departTrip}}</p>
+            <p>Return: {{returnTrip}}</p>
+            <img src="{{image}}" style="width: 300px;">
+        </li>
+
+        {{/trips}}
+    </ul>
+
+    {{^trips}}
+    <h2>There are no trips planned. Click "Add Trip" to start your journey.</h2>
+    {{/trips}}
+
+</body>
+
+</html>
