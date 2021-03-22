@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+</head>
+
+<body>
+    <section>
+        <form method="POST" action="/add-blog">
+            <input type="text" placeholder="title" name="title">
+            <textarea placeholder="Type body here" name="body"></textarea>
+            <label id="isPublished">Is Published</label>
+            <input type="checkbox" name="isPublished" id="isPublished" />
+            <button>Post</button>
+        </form>
+    </section>
+</body>
+
+</html>
