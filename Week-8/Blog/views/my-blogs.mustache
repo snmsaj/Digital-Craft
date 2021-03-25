@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs</title>
+</head>
+<body>
+    {{> menu}}
+
+    <a href="/add-blog"><button>Add Blog</button></a>
+
+    <section>
+        {{#myblogs}}
+            <div>
+                <h2>{{title}}</h2>
+                <p>{{body}}</p>
+                <a href="/my-blogs/{{post_id}}"><button>Edit</button></a>
+                
+                <form method="POST" action="/my-blogs">
+                    <input type="hidden" value="{{post_id}}" name="postId">
+                    <button>Delete</button>
+                </form>
+            </div>
+        {{/myblogs}}
+
+        {{^myblogs}}
+            <p>You have no blogs. Create a blog!</p>
+        {{/myblogs}}
+    </section>
+</body>
+</html>

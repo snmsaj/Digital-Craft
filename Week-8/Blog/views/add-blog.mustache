@@ -9,14 +9,18 @@
 </head>
 
 <body>
+    {{> menu}}
+
     <section>
-        <form method="POST" action="/add-blog">
-            <input type="text" placeholder="title" name="title">
-            <textarea placeholder="Type body here" name="body"></textarea>
-            <label id="isPublished">Is Published</label>
-            <input type="checkbox" name="isPublished" id="isPublished" />
-            <button>Post</button>
-        </form>
+        <div>
+            <form method="POST" action="/add-blog">
+                <input type="text" placeholder="title" name="title" required>
+                <textarea placeholder="Type body here" rows="8" cols="20" name="body" required></textarea>
+                <label id="isPublished">Is Published</label>
+                <input type="checkbox" name="isPublished" id="isPublished" />
+                <button>Post</button>
+            </form>
+        </div>
     </section>
 </body>
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Blog</title>
+</head>
+
+<body>
+    {{> menu}}
+
+    <h2>Update Blog</h2>
+
+    <section>
+        <div>
+            {{#blog}}
+            <form method="POST" action="/my-blogs/{{post_id}}">
+                <input type="text" placeholder="title" value="{{title}}" name="title">
+                <textarea placeholder="Type body here" rows="8" cols="25" name="body"></textarea>
+                <input type="hidden" value="{{post_id}}" name="postId">
+
+                <button>Update</button>
+            </form>
+            {{/blog}}
+        </div>
+    </section>
+
+</body>
+
+</html>
