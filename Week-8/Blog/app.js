@@ -28,6 +28,7 @@ app.set('views','./views');
 app.set('view engine','mustache');
 app.use(express.urlencoded());
 app.use(express.static('css'));
+app.use(express.static('js'));
 app.use(session({
     secret: 'secretkey',
     resave: false,
