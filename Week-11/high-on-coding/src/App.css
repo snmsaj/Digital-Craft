@@ -1,0 +1,61 @@
+#root{
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
+.nav-container {
+  display: flex;
+  background-color: #1e90ff;
+  color: white;
+  /* justify-content: space-between; */
+  gap: 3rem;
+}
+
+.nav-container h1 {
+  margin: 1rem;
+  align-self: center;
+}
+
+.nav-container h2 {
+  margin: 1rem;
+  align-self: center;
+  font-size: 1.3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #dadada;
+  color: #3c3c3c;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  
+}
+
+.article h3 {
+  color: #1e90ff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.article p {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
+
+.comments-likes {
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+  color: white;
+  gap: 2rem;
+  font-weight: bold;
+  padding-left: .5rem;
+}
