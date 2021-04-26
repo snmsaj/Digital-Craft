@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import BaseLayout from './components/BaseLayout';
 import Home from './components/Home'
 import FetchBooks from './components/FetchBooks';
+import BooksPage from './components/BooksPage'
 import BookDetails from './components/BookDetails';
 
 ReactDOM.render(

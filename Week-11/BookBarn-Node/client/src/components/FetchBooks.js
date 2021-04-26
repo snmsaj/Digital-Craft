@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import BooksPage from './BooksPage';
 
 function FetchBooks() {
     const [books, setBooks] = useState([])
@@ -15,18 +16,22 @@ function FetchBooks() {
         })
     }
 
-    const bookItems = books.map(book => {
-        return <div className="book">
-            <input type="hidden" value={book.id}></input>
-            <img src = {book.imageURL} alt="Book Cover" />
-            <h6>{book.title}</h6>
-            <p>{book.author}</p>
-            <p>{book.genre}</p>
-            <p>{book.year}</p>
-        </div>
-    })
+    // const bookItems = books.map(book => {
+    //     return <div className="book">
+    //         <input type="hidden" value={book.id}></input>
+    //         <img src = {book.imageURL} alt="Book Cover" />
+    //         <h6>{book.title}</h6>
+    //         <p>{book.author}</p>
+    //         <p>{book.genre}</p>
+    //         <p>{book.year}</p>
+    //     </div>
+    // })
 
-    return(bookItems)
+    return (
+        <div>
+            <BooksPage books = {books} />
+        </div>
+    )
 
 }
 
